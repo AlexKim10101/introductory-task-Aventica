@@ -1,0 +1,227 @@
+
+
+.grid{
+	background-color: #d1f2c3;
+	padding: 10px;
+	display: grid;
+	grid-template-rows: 50px 100px auto;
+	grid-template-columns:215px auto;
+	grid-gap: 10px;
+	grid-template-areas:
+	"header header header"
+	"form field field"
+	"draft field field";
+}
+
+.grid > *{
+	background-color: #a2a0f3;
+}
+
+.header{
+	grid-area: header;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+}
+.counter{
+	position: absolute;
+	right: 10px;
+	height: 30px;
+	width: 30px;
+	border-radius: 5px;
+	background-color: #d7dad3;
+	text-align: center;
+	line-height: 30px;
+}
+
+.client-name{
+	color: #eec9eb;
+}
+
+.creation-container{
+	grid-area: form;
+	padding: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+.creation-input{
+	box-sizing: border-box;
+	height: 30px;
+	display: block;
+	outline: none;
+}
+
+.creation-input:focus{
+	box-sizing: border-box;
+	border: 2px solid black;
+}
+.creation-input--text{
+	width: 100%;
+	margin-bottom: 10px;
+
+}
+.creation-input--draft{
+	font: inherit;
+  	color: inherit;
+  	background-color: transparent;
+  	border: none;
+  	outline: none;
+	background-color: #858482;
+	width: 70px;
+	margin-right: auto;
+}
+
+.creation-input--save{
+	font: inherit;
+  	color: inherit;
+  	background-color: transparent;
+  	border: none;
+  	outline: none;
+	width: 100px;
+	background-color: #71d534;
+	
+}
+
+.draft-container{
+	grid-area: draft;
+	min-height: 300px;
+}
+
+.clean-container{
+	grid-area: field;
+	
+}
+
+.draft-container{
+
+}
+
+.draft-container__header{
+	margin-left: 20px;
+	color:#fcfcff;
+}
+
+.draft-list{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+
+}
+
+.card--draft{
+	margin: 15px 15px 25px;
+
+	height: 30px;
+}
+
+.clean-list{
+	list-style: none;
+	padding: 15px;
+	margin: 0px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-template-rows: repeat(auto-fill);
+	grid-gap: 15px;
+}
+
+
+.card{
+	background-color: #d8d8d8;
+	padding: 10px;
+	position: relative;
+
+}
+
+.card--clean{
+	padding: 15px;
+	height: 130px;
+}
+
+
+.card__text{
+	padding: 0px;
+	margin: 0px;
+}
+
+.button{
+	font: inherit;
+  	color: inherit;
+  	background-color: transparent;
+  	border: none;
+  	outline: none;
+}
+
+.button:focus{
+	box-sizing: border-box;
+	border: 2px solid black;
+}
+
+.button--remove{
+  	background-color: #c9241e;
+  	position: absolute;
+  	left: 35px;
+  	bottom: -10px;
+}
+
+.button--save{
+  	background-color: #71d534;
+  	position: absolute;
+  	right: 15px;
+  	bottom: -10px;
+
+}
+
+.button--toDraft{
+	position: absolute;
+	left:15px;
+	bottom: 15px;
+  	background-color: #ae8e91;
+	width: 50px;
+	height: 40px;
+	color:#fff2f5;
+
+}
+
+.button--mark{
+	position: absolute;
+	right:15px;
+	bottom: 15px;
+  	background-color: #ae8e91;
+	width: 68px;
+	height: 40px;
+	color:#fff2f5;
+
+}
+
+.indicator{
+	position: absolute;
+	right:15px;
+	top:15px;
+	width: 15px;
+	height: 15px;
+	background-color: blue;
+}
+
+.indicator--red{
+	background-color: #d55650;
+}
+
+.indicator--green{
+	background-color: #3fae62;
+}
+
+/*Hidden */
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
